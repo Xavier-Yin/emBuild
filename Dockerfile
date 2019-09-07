@@ -8,10 +8,7 @@ RUN apt-get -qq update && \
     tar xvf SES && \
     printf 'yes\n' | DISPLAY=:1 $(find arm_segger_* -name "install_segger*") --copy-files-to /ses && \
     cd / && \
-    rm -rf /_tmp && \
-    apt-get -qq remove -y wget && \
-    apt-get -qq autoremove --purge && \
-    apt-get -qq clean
+    rm -rf /_tmp
     
 ENV PATH="/ses/bin:$PATH"
     
