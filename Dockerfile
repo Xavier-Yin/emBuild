@@ -11,8 +11,7 @@ RUN apt-get -qq update && \
     rm -rf /_tmp && \
     apt-get -qq remove -y wget && \
     apt-get -qq autoremove --purge && \
-    apt-get -qq clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get -qq clean
     
 ENV PATH="/ses/bin:$PATH"
     
